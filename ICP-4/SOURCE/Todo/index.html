@@ -47,12 +47,12 @@
 
               <table ng-repeat="task in completed" border="0.5" width="420px">
                 <tr>
-                    <td style="background-color:#1EB2B1" width="5%">
+                    <td style="background-color:orchid" width="5%">
                       {{$index+1}}
                     </td >
-                    <td style="background-color:#1EB2B1" width="95%">
+                    <td style="background-color:orchid" width="95%">
                         <input type="checkbox" ng-click="completeItem($index, completed, items)" checked />
-                        <strike>{{ task.todoText }} </strike>
+                       {{ task.todoText }} 
                     </td>
                 </tr>
               </table>

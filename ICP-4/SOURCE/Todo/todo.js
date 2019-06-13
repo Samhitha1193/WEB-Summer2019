@@ -7,9 +7,9 @@ angular.module('angularTodo', [])
         $scope.items.push({todoText:$scope.todoInput, done:false,remove:false});
         $scope.todoInput = "";
     };
-	$scope.completeItem = function(index, start, end) {
-            end.push(start[index]);
-            start.splice(index, 1);
+	$scope.completeItem = function(index, from, to) {
+            to.push(from[index]);
+            from.splice(index, 1);
           };
     $scope.deleteItem = function() {
         var oldList = $scope.items;
