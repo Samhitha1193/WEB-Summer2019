@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="angularTodo" ng-controller="angularTodoC">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo in Angular.js</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,500' rel='stylesheet'
+          type='text/css'>
+    <script src="https://use.fontawesome.com/21be5f2318.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="todo.js"></script> 
+</head>
+<body >
+
+
+<h1 align="center"><img src="todo.jpg" alt="Trulli"  style="width:60px;height:60px;" align="middle">           SAMHITHA TO-DO LIST</h1>
+
+<p align="center">Check the box beside the task to mark it as complete <img src="smiley.jpg" alt="Smiley face" width="60" height="60"> </p>
+
+<form ng-submit="submitNewItem()" align="center">
+    <input type="text" ng-model="todoInput"  placeholder="Enter the description of the task" size="60">
+    <input type="submit" value="Add New Task">
+</form>
+
+<br>
+<br>
+
+<div ng-repeat="x in items" align="center">
+    <input type="checkbox" ng-model="x.done" ng-click="completeItem($index, items, completed)"> <span ng-bind="x.todoText"></span>
+    <input type="checkbox" ng-click="deleteItem()" ng-model="x.remove" > Check this to remove item
+</div>
+
+<div ng-show="completed.length" align="center">
+            <h3>Completed ({{ completed.length }})</h3>
+              <div ng-repeat="task in completed">
+                <input type="checkbox" ng-click="completeItem($index, completed, items)" checked />
+                  <strike>{{ task.todoText }} </strike> </br>
+              </div>
+          </div>
+</body>
+</html>
