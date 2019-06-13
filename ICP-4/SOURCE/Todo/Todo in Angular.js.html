@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://localhost:63342/Todo/index.html?_ijt=49f4604578m1jplg79r3geeli3 -->
+<html lang="en" ng-app="angularTodo" ng-controller="angularTodoC" class="ng-scope wf-fontawesome-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title>Todo in Angular.js</title>
+    <link rel="stylesheet" href="./Todo in Angular.js_files/main.css">
+    <link rel="stylesheet" href="./Todo in Angular.js_files/animate.min.css">
+    <link href="./Todo in Angular.js_files/css" rel="stylesheet" type="text/css">
+    <script src="./Todo in Angular.js_files/webfontloader.js"></script><script src="./Todo in Angular.js_files/21be5f2318.js"></script>
+    <script src="./Todo in Angular.js_files/angular.min.js"></script>
+    <script src="./Todo in Angular.js_files/todo.js"></script><link rel="stylesheet" href="./Todo in Angular.js_files/21be5f2318.css" media="all"> 
+</head>
+<body>
+
+
+<h1 align="center"><img src="./Todo in Angular.js_files/todo.jpg" alt="Trulli" style="width:60px;height:60px;" align="middle">           SAMHITHA TO-DO LIST</h1>
+
+<p align="center">Check the box beside the task to mark it as complete <img src="./Todo in Angular.js_files/smiley.jpg" alt="Smiley face" width="60" height="60"> </p>
+
+<form ng-submit="submitNewItem()" align="center" class="ng-pristine ng-valid">
+    <input type="text" ng-model="todoInput" placeholder="Enter the description of the task" size="60" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <input type="submit" value="Add New Task">
+</form>
+
+<br>
+<br>
+
+<!-- ngRepeat: x in items --><table ng-repeat="x in items" align="center" border="0.5" class="ng-scope">
+    <tbody><tr style="width:50%">
+        <td width="3%" style="background-color:#1EB2B1">
+            <p class="ng-binding">1</p>
+        </td>
+       <td width="60%" style="background-color: #1EB2B1">
+            <input type="checkbox" ng-model="x.done" ng-click="completeItem($index, items, completed)" class="ng-pristine ng-untouched ng-valid ng-empty"> <span ng-bind="x.todoText" class="ng-binding">Complete Web ICP-4</span>
+        </td>
+        <td width="60%" style="background-color: #1EB2B1">
+            <input type="checkbox" ng-click="deleteItem()" ng-model="x.remove" class="ng-pristine ng-untouched ng-valid ng-empty"> Check this to remove item
+        </td>
+
+
+    </tr>
+</tbody></table><!-- end ngRepeat: x in items -->
+
+<div ng-show="completed.length" align="center" class="ng-hide">
+     <h3 class="ng-binding">Completed (0)</h3>
+
+              <!-- ngRepeat: task in completed -->
+
+
+          </div>
+
+</body></html>
