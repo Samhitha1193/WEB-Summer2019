@@ -47,7 +47,7 @@ body{
     padding-top: 8px;
 }
 
-.calc .buttons .button:hover {
+.calc .buttons .button:active {
     cursor: pointer;
     background-color: #ff568f;
 }
