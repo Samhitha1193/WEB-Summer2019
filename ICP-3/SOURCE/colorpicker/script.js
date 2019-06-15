@@ -38,14 +38,7 @@ $(document).ready(function(){
 
         setPreviewColor(color);
 
-        /*
-        var w = window.open("", "popupWindow", "width=600, height=400, scrollbars=yes");
-        var $w = $(w.document.body);
-        $w.html("<body style='background-color: rgb(66,134,200)'>Sai krishna</body>");
 
-         */
-        var myWindow = window.open("", "popupWindow", "width=1600, height=1400, scrollbars=yes");
-        myWindow.document.write("<body style='background-color: " + color + ";'></body>");
 
     })
 });
