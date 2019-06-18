@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+
+    <style>
+
+        .menu input {
+            width: 300px;
+            background: transparent;
+            border: 2px solid #1ab188;
+            border-radius: 4px;
+            color: #5e5e5e;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px;
+            margin-top: 10px;
+        }
+
+        .menu button {
+            width: 419px;
+            height: 40px;
+            background: #1ab188;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            border-radius: 4px;
+            color: #ffffff;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px;
+            margin-top: 10px;
+        }
+        body {
+            background-image: url("food.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        table {
+            max-width: 960px;
+            margin: 10px auto;
+            border: 1px solid #FFF;
+        }
+
+        caption {
+            font-size: 1.6em;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        thead th {
+            font-weight: 400;
+            background: #8a97a0;
+            color: #FFF;
+        }
+
+        tr {
+            background: #f4f7f8;
+            border: 1px solid #FFF;
+            margin-bottom: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: #e8eeef;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px;
+            font-weight: 300;
+        }
+
+        tfoot tr {
+            background: none;
+        }
+
+        tfoot td {
+            padding: 10px 2px;
+            font-size: 0.8em;
+            font-style: italic;
+            color: #8a97a0;
+        }
+        .circle-text {
+            width:20%;
+        }
+        .circle-text:after {
+            content: "";
+            display: block;
+            width: 70%;
+            height:0;
+            padding-bottom: 50%;
+            background: #4679BD;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .circle-text div {
+            float:left;
+            width:100%;
+            padding-top:50%;
+            line-height:1em;
+            margin-top:-0.5em;
+            text-align:center;
+            color:white;
+        }
+        .oval {
+            width: 240px;
+            height: 120px;
+            background: #FDFFBD;
+            -moz-border-radius: 135px / 75px;
+            -webkit-border-radius: 135px / 75px;
+            border-radius: 135px / 75px;padding:15px;
+
+            margin: auto;
+            border-color: #1ab188;
+
+
+        }
+        .oval:hover{
+            background-color: #4BD3F1;
+        }
+
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .spin{
+            animation-name: spin;
+            animation-duration: 4000ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+        .button5 {border-radius: 50%;}
+    </style>
+
+
+
+</head>
+
+<body class="body" >
+
+<div ng-controller="View1Ctrl" style="top: 200px">
+
+    <div class="menu" id="div_SearchContainer">
+        <h1 align="absolute" style="text-align: center; color: #1ab188">Restaurants for U</h1>
+        <input type="text" id="txt_placeName" placeholder="Enter the place you want to search for"
+               style="margin-left: 100px"/>
+        <input type="text" id="txt_searchFilter" placeholder="Enter the search query"/>
+        <button id="btn_getReview" ng-click="getVenues()">Get Venues</button>
+    </div>
+
+    <div id="div_VenueList">
+        <h2 style="text-align: center; color: #1ab188"> Top Five Restaurants</h2>
+
+            <div ng-repeat="venue in venueList"
+                style="font-size: x-large; color: #5e5e5e; text-align: center; list-style: none " class="cols-xs-4">
+
+                <div class="oval" ><div><p style="color: mediumblue">{{venue.name}}</p>
+                    <p style="color: orchid"><i>{{venue.location.address}}</i></p>  </div>  </div>
+
+
+
+            </div>
+
+
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js">
+
+</script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
