@@ -3,8 +3,7 @@
  */
 
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://samhithadb:vijayaraja2@ds241537.mlab.com:41537/student';
-
+var url = "mongodb+srv://Samhitha1193:Vijayaraja28*@samhithacluster1-x1aje.mongodb.net/test?retryWrites=true&w=majority";
 
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
@@ -24,6 +23,7 @@ MongoClient.connect(url, function(err, db) {
         { name: 'William', address: 'Central st 954'},
         { name: 'Chuck', address: 'Main Road 989'},
         { name: 'Viola', address: 'Sideway 1633'}
+
     ];
     dbase.collection("newCollection").insertMany(myobj, function(err, res) {
         if (err) throw err;
