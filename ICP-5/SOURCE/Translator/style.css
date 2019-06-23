@@ -1,0 +1,26 @@
+
+body{
+    background-image: url("http://www.englishrussiantranslator.co.za/wp-content/uploads/2013/11/world-map-background1small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+
+}
+#container {
+    width: 1040px;
+    margin: 0px auto;
+    min-height: 750px;
+    text-align: center;
+}

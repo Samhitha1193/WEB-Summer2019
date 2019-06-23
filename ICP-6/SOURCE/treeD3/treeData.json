@@ -1,0 +1,97 @@
+{
+  "name": "United States",
+  "parent": "US",
+  "children": [
+    {
+            "name": "University of Missouri System",
+            "parent": "",
+            "children": [
+              {
+                "name": "University of Missouri",
+                "parent": "University of Missouri System"
+              },
+              {
+                "name": "University of Missouri - Kansas City",
+                "parent": "University of Missouri System"
+              },
+              {
+                "name": "Missouri University of Science and Technology",
+                "parent": "University of Missouri System"
+              },
+              {
+                "name": "University of Missouri–St. Louis",
+                "parent": "University of Missouri System"
+              }
+            ]
+
+    },
+    {
+      "name": "Princeton University",
+      "parent": "US",
+      "children": [
+        {
+          "name": "Computer Science",
+          "parent": "Princeton University"
+        },
+        {
+          "name": "Medicine",
+          "parent": "Princeton University"
+        },
+        {
+          "name": "Electrical Engineering",
+          "parent": "Princeton University"
+        },
+        {
+          "name": "Biological Science",
+          "parent": "Princeton University"
+        }
+      ]
+    },
+    {
+      "name": "Harvard University",
+      "parent": "US",
+      "children": [
+        {
+          "name": "Computer Science",
+          "parent": "Harvard University"
+        },
+        {
+          "name": "Civil Engineering",
+          "parent": "Harvard University"
+        },
+        {
+          "name": "Medicine",
+          "parent": "Harvard University"
+        }
+      ]
+    },
+    {
+      "name": "University of Berkley",
+      "parent": "US",
+      "children": [
+        {
+          "name": "Mechanical Engineering",
+          "parent": "University of Berkley"
+        },
+        {
+          "name": "Computer Science",
+          "parent": "University of Berkley"
+        },
+        {
+          "name": "Civil Engineering",
+          "parent": "University of Berkley"
+        }
+      ]
+    },
+    {
+      "name": " Stanford University",
+      "parent": "US",
+      "children": [
+        {
+          "name": "Computer Science",
+          "parent": "Yale University"
+        }
+      ]
+    }
+  ]
+}
